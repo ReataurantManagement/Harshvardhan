@@ -218,14 +218,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="946dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="60dp"
                 android:text="@string/Submit"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/check" />
 
             <TextView
                 android:id="@+id/SettingText"
@@ -353,21 +353,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ratingBarAmbience" />
 
-            <EditText
-                android:id="@+id/extraFeedback"
-                android:layout_width="275dp"
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="865dp"
-                android:layout_marginBottom="140dp"
-                android:ems="10"
-                android:hint="@string/HintFeedback"
-                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/checkBoxText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/ratingBarHygiene"
+                app:layout_constraintVertical_bias="0.18" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>

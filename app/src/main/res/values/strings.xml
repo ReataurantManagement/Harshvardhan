@@ -125,5 +125,6 @@
     <string name="title_activity_feedbackfinal">Feedbackfinal</string>
     <string name="ResetPassword">Forgot Password?</string>
     <string name="rpIns">Please enter your email to rest your password</string>
+    <string name="checkBoxText">Do you want to confirm</string>
 
 </resources>

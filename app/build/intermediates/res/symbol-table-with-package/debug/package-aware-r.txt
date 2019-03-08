@@ -1124,6 +1124,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id check
 id checkbox
 id chronometer
 id clip_horizontal
@@ -1155,7 +1156,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id extraFeedback
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1486,6 +1486,7 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
+string checkBoxText
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
