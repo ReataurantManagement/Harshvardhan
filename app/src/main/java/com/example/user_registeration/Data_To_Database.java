@@ -2,12 +2,11 @@ package com.example.user_registeration;
 
 public class Data_To_Database
 {
+    //for Restaurant
     float parking,cordialty,quality,appeal,taste,ambience,comfort,hygiene,count;
-    //short count;
 
 
-
-    Data_To_Database(float parking,float cordialty, float quality, float appeal, float taste, float ambience, float comfort, float hygiene,float count) {
+    Data_To_Database(float parking, float cordialty, float quality, float appeal, float taste, float ambience, float comfort, float hygiene, float count) {
         this.parking = parking;
         this.cordialty = cordialty;
         this.quality = quality;

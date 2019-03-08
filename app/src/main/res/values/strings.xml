@@ -126,5 +126,7 @@
     <string name="ResetPassword">Forgot Password?</string>
     <string name="rpIns">Please enter your email to rest your password</string>
     <string name="checkBoxText">Do you want to confirm</string>
+    <string name="SpeedText">Speed</string>
+    <string name="PackageText">Packing</string>
 
 </resources>

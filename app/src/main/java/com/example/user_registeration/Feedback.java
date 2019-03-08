@@ -1,7 +1,6 @@
 package com.example.user_registeration;
 
 import android.content.Intent;
-import android.media.Rating;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,36 +20,20 @@ import com.google.firebase.database.ValueEventListener;
 public class Feedback extends AppCompatActivity
 {
     RatingBar parking,cordialty,quality,appeal,taste,ambience,comfort,hygiene;
-    EditText extraFeedback;
     Button submitFeedback;
     CheckBox check;
     FirebaseDatabase database;
-    FirebaseAuth firebaseAuth;
     DatabaseReference databaseRef;
     float vparking,vcordialty,vquality,vappeal,vtaste,vambience,vcomfort,vhygiene;
     float oldparking,oldcordialty,oldquality,oldappeal,oldtaste,oldambience,oldcomfort,oldhygiene;
-
     float count;
-    
-    
-    
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
         Feedback_Restaurant_Variables();
-
-
-
-
         database = FirebaseDatabase.getInstance();
-        databaseRef = database.getReference();
-
-
+        databaseRef = database.getReference().child("Ratings");
         //When Rating is set by the user
         parking.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -113,7 +96,7 @@ public class Feedback extends AppCompatActivity
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseRef.child("Ratings").addValueEventListener(new ValueEventListener() {
+                databaseRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot)
                     {
@@ -166,10 +149,10 @@ public class Feedback extends AppCompatActivity
 
     private void Feedback_Restaurant_Variables()
     {
-        parking=(RatingBar) findViewById(R.id.ratingBarParking);
+        parking=(RatingBar) findViewById(R.id.ratingBarSpeed);
         cordialty=(RatingBar)findViewById(R.id.ratingBarCordial);
         quality=(RatingBar)findViewById(R.id.ratingBarQuality);
-        appeal=(RatingBar)findViewById(R.id.ratingBarAppeal);
+        appeal=(RatingBar)findViewById(R.id.ratingBarPacking);
         taste=(RatingBar)findViewById(R.id.ratingBarTaste);
         ambience=(RatingBar)findViewById(R.id.ratingBarAmbience);
         comfort=(RatingBar)findViewById(R.id.ratingBarComfort);
@@ -184,7 +167,7 @@ public class Feedback extends AppCompatActivity
     private void Send_Feedback()
     {
         Data_To_Database ratings=new Data_To_Database(vparking,vcordialty,vquality,vappeal,vtaste,vambience,vcomfort,vhygiene,count);
-        databaseRef.child("Ratings").setValue(ratings);
+        databaseRef.setValue(ratings);
     }
 
 
