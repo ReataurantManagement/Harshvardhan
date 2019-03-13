@@ -14,6 +14,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Objects;
+
+import static com.google.firebase.auth.FirebaseAuth.*;
+import static java.util.Objects.*;
+
 public class ResetPassword extends AppCompatActivity
 {
 
@@ -21,13 +26,12 @@ public class ResetPassword extends AppCompatActivity
     EditText rpEmail;
     Button rpSubmit;
     String userEmail;
-    FirebaseAuth firebaseAuth;
+    FirebaseAuth firebaseAuth = getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
 
-        firebaseAuth=FirebaseAuth.getInstance();
         ResetPassword_Variables();
 
         rpSubmit.setOnClickListener(new View.OnClickListener() {
@@ -47,17 +51,14 @@ public class ResetPassword extends AppCompatActivity
     }
     private void Send_Email()
     {
-        if(userEmail.equals("\0"))
-        {
+        if (userEmail.equals("\0")) {
             Toast.makeText(ResetPassword.this,"Please Enter your Registered Email Address",Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
+        } else {
             firebaseAuth.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task)
                 {
-                    if (task.isSuccessful())
+                    if (requireNonNull(task).isSuccessful())
                     {
                         Toast.makeText(ResetPassword.this, "Password Reset Instructions has been sent to your email", Toast.LENGTH_SHORT).show();
                         finish();

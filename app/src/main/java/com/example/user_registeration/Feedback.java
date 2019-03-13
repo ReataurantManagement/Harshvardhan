@@ -1,14 +1,17 @@
 package com.example.user_registeration;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.RatingBar.OnRatingBarChangeListener;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +19,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.Objects;
 
 public class Feedback extends AppCompatActivity
 {
@@ -35,56 +40,56 @@ public class Feedback extends AppCompatActivity
         database = FirebaseDatabase.getInstance();
         databaseRef = database.getReference().child("Ratings");
         //When Rating is set by the user
-        parking.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        parking.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vparking=ratingBar.getRating();
 
             }
         });
-        comfort.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        comfort.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vcomfort=ratingBar.getRating();
 
             }
         });
-        cordialty.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        cordialty.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vcordialty=ratingBar.getRating();
 
             }
         });
-        hygiene.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        hygiene.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vhygiene=ratingBar.getRating();
 
             }
         });
-        quality.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        quality.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vquality=ratingBar.getRating();
 
             }
         });
-        ambience.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        ambience.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vambience=ratingBar.getRating();
 
             }
         });
-        appeal.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        appeal.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vappeal=ratingBar.getRating();
 
             }
         });
-        taste.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        taste.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 vtaste=ratingBar.getRating();
@@ -93,23 +98,23 @@ public class Feedback extends AppCompatActivity
         });
 
         //To confirm the ratings given by the user and to get the previous count value
-        check.setOnClickListener(new View.OnClickListener() {
+        check.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 databaseRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot)
                     {
-                        count= Float.parseFloat(dataSnapshot.child("count").getValue().toString());
+                        count= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("count").getValue()).toString());
                         count+=1;
-                        oldambience= Float.parseFloat(dataSnapshot.child("ambience").getValue().toString());
-                        oldappeal= Float.parseFloat(dataSnapshot.child("appeal").getValue().toString());
-                        oldcomfort= Float.parseFloat(dataSnapshot.child("comfort").getValue().toString());
-                        oldcordialty= Float.parseFloat(dataSnapshot.child("cordialty").getValue().toString());
-                        oldhygiene= Float.parseFloat(dataSnapshot.child("hygiene").getValue().toString());
-                        oldparking= Float.parseFloat(dataSnapshot.child("parking").getValue().toString());
-                        oldquality= Float.parseFloat(dataSnapshot.child("quality").getValue().toString());
-                        oldtaste= Float.parseFloat(dataSnapshot.child("taste").getValue().toString());
+                        oldambience= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("ambience").getValue()).toString());
+                        oldappeal= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("appeal").getValue()).toString());
+                        oldcomfort= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("comfort").getValue()).toString());
+                        oldcordialty= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("cordialty").getValue()).toString());
+                        oldhygiene= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("hygiene").getValue()).toString());
+                        oldparking= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("parking").getValue()).toString());
+                        oldquality= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("quality").getValue()).toString());
+                        oldtaste= Float.parseFloat(Objects.requireNonNull(dataSnapshot.child("taste").getValue()).toString());
                     }
 
                     @Override
@@ -120,7 +125,7 @@ public class Feedback extends AppCompatActivity
 
 
 
-                submitFeedback.setOnClickListener(new View.OnClickListener() {
+                submitFeedback.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Calculate_Average();
@@ -149,16 +154,16 @@ public class Feedback extends AppCompatActivity
 
     private void Feedback_Restaurant_Variables()
     {
-        parking=(RatingBar) findViewById(R.id.ratingBarSpeed);
-        cordialty=(RatingBar)findViewById(R.id.ratingBarCordial);
-        quality=(RatingBar)findViewById(R.id.ratingBarQuality);
-        appeal=(RatingBar)findViewById(R.id.ratingBarPacking);
-        taste=(RatingBar)findViewById(R.id.ratingBarTaste);
-        ambience=(RatingBar)findViewById(R.id.ratingBarAmbience);
-        comfort=(RatingBar)findViewById(R.id.ratingBarComfort);
-        hygiene=(RatingBar)findViewById(R.id.ratingBarHygiene);
-        submitFeedback=(Button)findViewById(R.id.buttonSubmit);
-        check=(CheckBox) findViewById(R.id.check);
+        parking= findViewById(R.id.ratingBarSpeed);
+        cordialty= findViewById(R.id.ratingBarCordial);
+        quality= findViewById(R.id.ratingBarQuality);
+        appeal= findViewById(R.id.ratingBarPacking);
+        taste= findViewById(R.id.ratingBarTaste);
+        ambience= findViewById(R.id.ratingBarAmbience);
+        comfort= findViewById(R.id.ratingBarComfort);
+        hygiene= findViewById(R.id.ratingBarHygiene);
+        submitFeedback= findViewById(R.id.buttonSubmit);
+        check= findViewById(R.id.check);
 
     }
 

@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array MainMenu
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -74,7 +75,9 @@ attr autoSizeMinTextSize
 attr autoSizePresetSizes
 attr autoSizeStepGranularity
 attr autoSizeTextType
+attr backGroundColor
 attr background
+attr backgroundDrawable
 attr backgroundSplit
 attr backgroundStacked
 attr backgroundTint
@@ -241,6 +244,7 @@ attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
+attr finalNumber
 attr firstBaselineToTopHeight
 attr floatingActionButtonStyle
 attr font
@@ -285,6 +289,7 @@ attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
+attr initialNumber
 attr insetForeground
 attr isLightTheme
 attr itemBackground
@@ -516,10 +521,12 @@ attr textAppearanceSearchResultTitle
 attr textAppearanceSmallPopupMenu
 attr textAppearanceSubtitle1
 attr textAppearanceSubtitle2
+attr textColor
 attr textColorAlertDialogListItem
 attr textColorSearchUrl
 attr textEndPadding
 attr textInputStyle
+attr textSize
 attr textStartPadding
 attr theme
 attr thickness
@@ -614,6 +621,7 @@ color cardview_shadow_start_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color colorText
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -786,6 +794,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen app_bar_height
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -905,6 +915,8 @@ dimen mtrl_textinput_box_stroke_width_default
 dimen mtrl_textinput_box_stroke_width_focused
 dimen mtrl_textinput_outline_box_expanded_padding
 dimen mtrl_toolbar_default_height
+dimen nav_header_height
+dimen nav_header_vertical_spacing
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1015,6 +1027,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1040,14 +1053,27 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dessert
 drawable diner
+drawable entree
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add_shopping_cart_black_24dp
+drawable ic_attach_money_black_24dp
+drawable ic_exit_to_app_black_24dp
+drawable ic_feedback_black_24dp
 drawable ic_launcher_background
-drawable ic_launcher_foreground
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_manage
+drawable ic_menu_send
+drawable ic_menu_share
+drawable ic_menu_slideshow
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_restaurant_black_24dp
+drawable maincourse
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1063,6 +1089,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable side_nav_bar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font frenchpress_freefont
@@ -1076,6 +1103,7 @@ id Feedback
 id FoodText
 id FriendText
 id META
+id Mmenu
 id PackagingText
 id ParkingText
 id PresentationText
@@ -1102,22 +1130,26 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_btn
 id adjust_height
 id adjust_width
 id alertTitle
 id all
 id always
 id ambienceText
+id app_bar_layout
 id async
 id auto
 id barrier
 id beginning
 id blocking
 id bottom
+id btnCart
 id buttonPanel
 id buttonSubmit
 id cancel_action
@@ -1131,6 +1163,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id collapsing
 id container
 id content
 id contentPanel
@@ -1148,6 +1181,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id drawer_layout
 id editText
 id edit_query
 id end
@@ -1157,11 +1191,18 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
+id feedback
 id fill
 id fill_horizontal
 id fill_vertical
 id filled
 id fixed
+id food_desc
+id food_list
+id food_namae
+id food_name
+id food_price
 id forever
 id ghost_view
 id gone
@@ -1170,18 +1211,21 @@ id groups
 id guideline
 id home
 id homeAsUp
+id homeDel
 id icon
 id icon_group
 id icon_only
 id ifRoom
 id image
-id imageView2
+id img_food
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout
+id layout_price
 id left
 id light
 id line1
@@ -1204,7 +1248,12 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nav_cart
+id nav_orders
+id nav_share
+id nav_view
 id navigation_header_container
+id nestedScrollView
 id never
 id newEmail
 id newEmailText
@@ -1215,6 +1264,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_button
+id number_counter
 id oldUser
 id outline
 id packed
@@ -1285,12 +1336,15 @@ id spread_inside
 id src_atop
 id src_in
 id src_over
+id srimageView
+id srtextView
 id standard
 id start
 id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id subtract_btn
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1311,6 +1365,9 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toolbar
+id toolbar2
+id toolbarMain
 id top
 id topPanel
 id touch_outside
@@ -1319,6 +1376,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id txtFullName
 id uniform
 id unlabeled
 id up
@@ -1381,9 +1439,15 @@ layout abc_tooltip
 layout activity_choice
 layout activity_feedback
 layout activity_feedback_home_delivery
+layout activity_food_detail
+layout activity_food_list
 layout activity_main
+layout activity_main_menu
+layout activity_options
 layout activity_reset_password
 layout activity_sign__up
+layout app_bar_options
+layout content_options
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1398,8 +1462,10 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout layout
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
+layout nav_header_options
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1418,9 +1484,12 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout single_row
 layout support_simple_spinner_dropdown_item
-menu menu
+menu activity_options_drawer
+menu options
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string AmbienceText
 string CleanText
@@ -1520,13 +1589,17 @@ string hint
 string hintemail
 string hintpassword
 string hintusrname
-string large_text
 string loginButton
 string loginTitle
 string mtrl_chip_close_icon_content_description
 string nPassword
 string nRegister
 string nUserName
+string nav_header_desc
+string nav_header_subtitle
+string nav_header_title
+string navigation_drawer_close
+string navigation_drawer_open
 string newemail
 string password_toggle_content_description
 string path_password_eye
@@ -1538,6 +1611,7 @@ string rpIns
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_feedbackfinal
+string title_activity_options
 string title_activity_scrolling
 string userLogin
 string userRegister
@@ -2081,6 +2155,7 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable ElegantNumberButton backGroundColor backgroundDrawable finalNumber initialNumber textColor textSize
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing

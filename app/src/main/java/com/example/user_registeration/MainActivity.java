@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     FirebaseAuth firebaseAuth;
     String userEmail,password;
 
+
     boolean correct_credentials;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,14 +34,22 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         firebaseAuth=FirebaseAuth.getInstance();
-        Homepage_Variables();
+
+        signUp= findViewById(R.id.signUp);
+        loginEmail= findViewById(R.id.loginEmail);
+        loginPassword= findViewById(R.id.loginPassword);
+        loginButton= findViewById((R.id.loginButton));
+        resetPassword= findViewById(R.id.resetPassword);
+
+
         FirebaseUser user=firebaseAuth.getCurrentUser();
         if(user!=null)
         {
             finish();
-            startActivity(new Intent(MainActivity.this,Choice.class));
+            startActivity(new Intent(MainActivity.this,Options.class));
         }
         //on clicking login button
+
         loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -46,19 +57,22 @@ public class MainActivity extends AppCompatActivity
                     {
                         if(check_user_information())
                         {
-                            startActivity(new Intent(MainActivity.this , Choice.class));
+                            startActivity(new Intent(MainActivity.this , Options.class));
                         }
                     }
 
                 }
             });
         //if you forget your password
-        resetPassword.setOnClickListener(new View.OnClickListener() {
+
+       /*resetPassword.setOnClickListener(new View.OnClickListener()
+        {
+
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,ResetPassword.class));
             }
-        });
+        });*/
         //redirecting to user sign up page
         signUp.setOnClickListener(new View.OnClickListener()
         {
@@ -70,15 +84,6 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-    }
-
-    private void Homepage_Variables()
-    {
-        signUp=(TextView)findViewById(R.id.signUp);
-        loginEmail=(EditText)findViewById(R.id.loginEmail);
-        loginPassword=(EditText)findViewById(R.id.loginPassword);
-        loginButton=(Button)findViewById((R.id.loginButton));
-        resetPassword=(TextView)findViewById(R.id.resetPassword);
     }
 
     private boolean Validate_Login_Credentials()
@@ -108,7 +113,7 @@ public class MainActivity extends AppCompatActivity
                 if(task.isSuccessful())
                 {
                     Toast.makeText(MainActivity.this,"Login Successful!!!",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this,Choice.class));
+                    startActivity(new Intent(MainActivity.this,Options.class));
                     correct_credentials=true;
                 }
                 else
