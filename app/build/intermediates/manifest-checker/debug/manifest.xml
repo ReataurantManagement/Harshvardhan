@@ -27,8 +27,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.user_registeration.Options"
+            android:label="@string/title_activity_options"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.user_registeration.FoodList" />
         <activity android:name="com.example.user_registeration.FoodDetail" />
-        <activity android:name="com.example.user_registeration.Entrees" />
         <activity android:name="com.example.user_registeration.MainMenu" />
         <activity android:name="com.example.user_registeration.ResetPassword" />
         <activity android:name="com.example.user_registeration.Feedback_home_delivery" />

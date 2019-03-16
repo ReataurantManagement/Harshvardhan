@@ -14,8 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.Objects;
-
 import static com.google.firebase.auth.FirebaseAuth.*;
 import static java.util.Objects.*;
 
@@ -62,7 +60,7 @@ public class ResetPassword extends AppCompatActivity
                     {
                         Toast.makeText(ResetPassword.this, "Password Reset Instructions has been sent to your email", Toast.LENGTH_SHORT).show();
                         finish();
-                        startActivity(new Intent(ResetPassword.this,MainActivity.class));
+                        startActivity(new Intent(ResetPassword.this, Login.class));
                     }
                     else
                     {

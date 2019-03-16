@@ -132,7 +132,7 @@ public class Feedback extends AppCompatActivity
                         Send_Feedback();
                         Toast.makeText(Feedback.this,"Upload Complete",Toast.LENGTH_SHORT).show();
                         finish();
-                        startActivity(new Intent(Feedback.this,Choice.class));
+                        startActivity(new Intent(Feedback.this,Home.class));
 
                     }});
 

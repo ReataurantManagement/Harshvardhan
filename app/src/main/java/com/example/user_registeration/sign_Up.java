@@ -39,7 +39,7 @@ public class sign_Up extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Toast.makeText(sign_Up.this, "works", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(sign_Up.this,MainActivity.class));
+                startActivity(new Intent(sign_Up.this, Login.class));
                 finish();
             }
         });
@@ -60,7 +60,7 @@ public class sign_Up extends AppCompatActivity
                             if (task.isSuccessful())
                             {
                                 Toast.makeText(sign_Up.this, "Registeration Successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(sign_Up.this,MainActivity.class));
+                                startActivity(new Intent(sign_Up.this, Login.class));
                             }
                             else
                                 {

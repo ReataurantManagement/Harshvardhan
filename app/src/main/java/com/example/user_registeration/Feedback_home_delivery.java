@@ -101,7 +101,7 @@ public class Feedback_home_delivery extends AppCompatActivity {
                         Send_Feedback();
                         Toast.makeText(Feedback_home_delivery.this,"Upload Complete",Toast.LENGTH_SHORT).show();
                         finish();
-                        startActivity(new Intent(Feedback_home_delivery.this,Choice.class));
+                        startActivity(new Intent(Feedback_home_delivery.this,Home.class));
 
                     }});
 

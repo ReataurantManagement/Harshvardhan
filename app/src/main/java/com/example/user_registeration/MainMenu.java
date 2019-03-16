@@ -5,8 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.media.Image;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +21,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.zip.Inflater;
 
 import static android.view.View.*;
 
 public class MainMenu extends AppCompatActivity {
 
-    ListView listView;
+    FirebaseDatabase fireData;
+    DatabaseReference ref;
+
+    RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
     String[] mainmenu;
     int[] images={R.drawable.entree,R.drawable.maincourse,R.drawable.dessert};
     Toolbar toolbar;
@@ -34,72 +47,47 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        fireData=FirebaseDatabase.getInstance();
+        ref=fireData.getReference().child("Menu");
+
+
         Resources res=getResources();
         mainmenu=res.getStringArray(R.array.MainMenu);
         toolbar=findViewById(R.id.toolbarMain);
         toolbar.setTitle("MENU");
 
+        recyclerView=findViewById(R.id.recycler_menu);
+        recyclerView.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
 
-        listView=findViewById(R.id.Mmenu);
 
-        CustomAdapter adapter = new CustomAdapter(this, mainmenu, images);
-        listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent;
-                Toast.makeText(MainMenu.this, "Selected course", Toast.LENGTH_SHORT).show();
-                switch(position) {
-                    case 0:
-                        intent = new Intent(MainMenu.this, FoodList.class);
-                        intent.putExtra("Course", listView.getItemAtPosition(position).toString());
-                        startActivity(intent);
-
-                        break;
-                    case 1:
-                        intent = new Intent(MainMenu.this, FoodList.class);
-                        intent.putExtra("Course", listView.getItemAtPosition(position).toString());
-                        startActivity(intent);
-                        break;
-                    case 2:
-                        intent = new Intent(MainMenu.this, FoodList.class);
-                        intent.putExtra("Course", listView.getItemAtPosition(position).toString());
-                        startActivity(intent);
-                        break;
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot data: dataSnapshot.getChildren()){
+                    String Menu=data.child("Entree").getValue().toString();
                 }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
 
 
-    }
-}
-
-class CustomAdapter extends ArrayAdapter<String>{
-    Context context;
-    String[] mainMenu;
-    int[] images;
-    public CustomAdapter( Context c, String[] menu, int[] imgs) {
-        super(c, R.layout.single_row, R.id.Mmenu,menu);
-        this.context=c;
-        this.mainMenu=menu;
-        this.images=imgs;
-
-    }
 
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("ViewHolder") View row=inflater.inflate(R.layout.single_row,parent,false);
-        ImageView myImage=row.findViewById(R.id.srimageView);
-        TextView myText=row.findViewById(R.id.srtextView);
-
-        myImage.setImageResource(images[position]);
-        myText.setText(mainMenu[position]);
-        return row;
 
     }
 }
+
+
+
+
+
+
 
 

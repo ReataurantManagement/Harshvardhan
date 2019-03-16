@@ -1099,11 +1099,9 @@ id CTRL
 id CleanText
 id ComfortText
 id FUNCTION
-id Feedback
 id FoodText
 id FriendText
 id META
-id Mmenu
 id PackagingText
 id ParkingText
 id PresentationText
@@ -1287,6 +1285,8 @@ id ratingBarPacking
 id ratingBarQuality
 id ratingBarSpeed
 id ratingBarTaste
+id recycler_food
+id recycler_menu
 id register
 id registerTitle
 id relativeLayout
@@ -1336,8 +1336,6 @@ id spread_inside
 id src_atop
 id src_in
 id src_over
-id srimageView
-id srtextView
 id standard
 id start
 id status_bar_latest_event_content
@@ -1356,7 +1354,6 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
-id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1366,7 +1363,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toolbar
-id toolbar2
 id toolbarMain
 id top
 id topPanel
@@ -1436,7 +1432,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_choice
 layout activity_feedback
 layout activity_feedback_home_delivery
 layout activity_food_detail
@@ -1462,7 +1457,9 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout food_item
 layout layout
+layout menu_item
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_options
@@ -1484,7 +1481,6 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout single_row
 layout support_simple_spinner_dropdown_item
 menu activity_options_drawer
 menu options
