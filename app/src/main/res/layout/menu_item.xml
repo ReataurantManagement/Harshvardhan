@@ -12,21 +12,21 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/food_list"
+            android:id="@+id/menu_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/entree" />
 
         <TextView
-            android:id="@+id/food_namae"
+            android:id="@+id/menu_namae"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@drawable/background"
             android:gravity="center"
             android:text="This is food"
-            android:textColor="@color/colorAccent"
+            android:textColor="@android:color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText" />
     </RelativeLayout>

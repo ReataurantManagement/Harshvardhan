@@ -1,5 +1,6 @@
 package com.example.user_registeration;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,24 +49,26 @@ public class Login extends AppCompatActivity
             finish();
             startActivity(new Intent(Login.this, Home.class));
         }
-        //on clicking login button
+        else {
+            //on clicking login button
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+            loginButton.setOnClickListener(new View.OnClickListener() {
+
+
                 @Override
                 public void onClick(View v) {
-                    if (Validate_Login_Credentials())
-                    {
-                        if(check_user_information())
-                        {
-                            startActivity(new Intent(Login.this , Home.class));
+                    if (Validate_Login_Credentials()) {
+                        if (check_user_information()) {
+                            startActivity(new Intent(Login.this, Home.class));
                         }
                     }
 
                 }
             });
-        //if you forget your password
 
-       /*resetPassword.setOnClickListener(new View.OnClickListener()
+            //if you forget your password
+
+       /* resetPassword.setOnClickListener(new View.OnClickListener()
         {
 
             @Override
@@ -72,17 +76,18 @@ public class Login extends AppCompatActivity
                 startActivity(new Intent(Login.this,ResetPassword.class));
             }
         });*/
-        //redirecting to user sign up page
-        signUp.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Toast.makeText(Login.this,"Main triggered",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent( Login.this,sign_Up.class));
 
-            }
-        });
+
+            //redirecting to user sign up page
+            signUp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(Login.this, "Main triggered", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Login.this, sign_Up.class));
+
+                }
+            });
+        }
     }
 
     private boolean Validate_Login_Credentials()

@@ -6,23 +6,26 @@
     density="xhdpi"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1552581955877"
+    timestamp="1552812064395"
     token="7221494911347131550"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="4518" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="2507" />
     <task
         name="verifier"
-        duration="0" />
+        duration="70" />
 
+    <artifact
+        location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
     <artifact
         location="/home/laharish/Harshvardhan/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
@@ -51,9 +54,6 @@
         location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
         location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
@@ -65,8 +65,11 @@
 
     <build
         build-mode="FULL"
-        timestamp="1552581955877"
+        timestamp="1552812064395"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
         <artifact
             location="/home/laharish/Harshvardhan/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
@@ -93,9 +96,6 @@
             type="SPLIT" />
         <artifact
             location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/home/laharish/Harshvardhan/app/build/intermediates/split-apk/debug/slices/slice_5.apk"

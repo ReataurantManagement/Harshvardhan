@@ -50,7 +50,7 @@ public class ResetPassword extends AppCompatActivity
     private void Send_Email()
     {
         if (userEmail.equals("\0")) {
-            Toast.makeText(ResetPassword.this,"Please Enter your Registered Email Address",Toast.LENGTH_SHORT).show();
+            Toast.makeText(ResetPassword.this,"Please Enter your Registered Gmail Address",Toast.LENGTH_SHORT).show();
         } else {
             firebaseAuth.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override

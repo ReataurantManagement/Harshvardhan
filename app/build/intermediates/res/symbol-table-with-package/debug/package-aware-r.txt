@@ -697,6 +697,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color overlayBackground
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1240,6 +1241,8 @@ id loginText
 id logout
 id masked
 id media_actions
+id menu_list
+id menu_namae
 id message
 id middle
 id mini
@@ -1248,7 +1251,6 @@ id mtrl_internal_children_alpha_tag
 id multiply
 id nav_cart
 id nav_orders
-id nav_share
 id nav_view
 id navigation_header_container
 id nestedScrollView
@@ -1436,13 +1438,13 @@ layout activity_feedback
 layout activity_feedback_home_delivery
 layout activity_food_detail
 layout activity_food_list
-layout activity_main
+layout activity_home
+layout activity_login
 layout activity_main_menu
-layout activity_options
 layout activity_reset_password
 layout activity_sign__up
-layout app_bar_options
-layout content_options
+layout app_bar_home
+layout content_home
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1462,7 +1464,7 @@ layout layout
 layout menu_item
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
-layout nav_header_options
+layout nav_header_home
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

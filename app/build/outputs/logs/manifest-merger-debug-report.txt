@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
 MERGED from [com.cepheuen.elegant-number-button:lib:1.0.2] /home/laharish/.gradle/caches/transforms-1/files-1.1/lib-1.0.2.aar/43122bf62f7229098049496710eea451/AndroidManifest.xml:2:1-19:12
 MERGED from [com.android.support:design:28.0.0] /home/laharish/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/c5068d8436499241416d2cee87fbcf75/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/laharish/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/242c15a13cfc757ddd5cfb18f0398514/AndroidManifest.xml:17:1-22:12
@@ -58,20 +58,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/laharish/.gradle/cache
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/laharish/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/7b7e3ca10f2409fa48e8dc92fd436d76/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/laharish/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bbbb2023d41e427477f24ce6f2082244/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /home/laharish/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/66c14e7227591ebe16b72bdcb7930bb8/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml
 		INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:2:11-69
@@ -90,7 +90,7 @@ MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/laharish/.gradle/cac
 	android:name
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:7:5-33:19
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:7:5-32:19
 MERGED from [com.cepheuen.elegant-number-button:lib:1.0.2] /home/laharish/.gradle/caches/transforms-1/files-1.1/lib-1.0.2.aar/43122bf62f7229098049496710eea451/AndroidManifest.xml:11:5-17:19
 MERGED from [com.cepheuen.elegant-number-button:lib:1.0.2] /home/laharish/.gradle/caches/transforms-1/files-1.1/lib-1.0.2.aar/43122bf62f7229098049496710eea451/AndroidManifest.xml:11:5-17:19
 MERGED from [com.android.support:design:28.0.0] /home/laharish/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/c5068d8436499241416d2cee87fbcf75/AndroidManifest.xml:22:5-20
@@ -155,14 +155,14 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/laharish/.gra
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:13:9-40
-activity#com.example.user_registeration.Options
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:14:9-17:68
+activity#com.example.user_registeration.Home
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:14:9-17:58
 	android:label
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:16:13-59
 	android:theme
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:15:13-36
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:15:13-33
 activity#com.example.user_registeration.FoodList
 ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:18:9-46
 	android:name
@@ -183,32 +183,28 @@ activity#com.example.user_registeration.Feedback_home_delivery
 ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:22:9-60
 	android:name
 		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:22:19-57
-activity#com.example.user_registeration.Choice
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:23:9-44
-	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:23:19-41
 activity#com.example.user_registeration.Feedback
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:24:9-46
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:23:9-46
 	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:24:19-43
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:23:19-43
 activity#com.example.user_registeration.sign_Up
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:25:9-45
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:24:9-45
 	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:25:19-42
-activity#com.example.user_registeration.MainActivity
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:26:9-32:20
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:24:19-42
+activity#com.example.user_registeration.Login
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:25:9-31:20
 	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:26:19-47
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:25:19-40
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:27:13-31:29
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:28:25-66
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml:29:27-74
 uses-sdk
 INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/laharish/Harshvardhan/app/src/main/AndroidManifest.xml

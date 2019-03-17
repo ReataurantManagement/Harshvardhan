@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.user_registeration.Options"
+            android:name="com.example.user_registeration.Home"
             android:label="@string/title_activity_options"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.user_registeration.FoodList" />
@@ -36,10 +36,9 @@
         <activity android:name="com.example.user_registeration.MainMenu" />
         <activity android:name="com.example.user_registeration.ResetPassword" />
         <activity android:name="com.example.user_registeration.Feedback_home_delivery" />
-        <activity android:name="com.example.user_registeration.Choice" />
         <activity android:name="com.example.user_registeration.Feedback" />
         <activity android:name="com.example.user_registeration.sign_Up" />
-        <activity android:name="com.example.user_registeration.MainActivity" >
+        <activity android:name="com.example.user_registeration.Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
